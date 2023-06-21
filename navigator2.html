@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+ <style>
+    .menu-button {
+      background-color: #3B82F6;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .points{
+        display: flex;
+        flex-direction:column ;
+    }
+    .back{
+        background-color: #3B82F6;
+        border-top: 1px solid #FFFFFF;
+    }
+    .box-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: relative;
+        cursor: pointer;
+        padding-right: 8px;
+        margin-right: 10px;
+      }
+      .fas {
+      color: #ffffff;
+    }
+    
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <h1 class="text-white text-2xl font-semibold">Course Helper</h1>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class=" box-toggle">
+                <a href="./index.html"> <i class="fas fa-bars" ></i></a>
+               </div>
+            
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4 back">
+    <div class="flex justify-between points">
+      <a href="./index.html" class="menu-button">Home</a>
+      <!-- <a href="./search.html" class="menu-button">Search</a> -->
+      <a href="./contact.html" class="menu-button">Contact</a>
+      <a href="./moderator.html" class="menu-button">Share Resources</a>
+    </div>
+    
+  </main>
+  
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-600">© 2023 Course Helper. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

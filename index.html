@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Helper</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <style>
+    /* Additional custom styles can be added here */
+    .fas {
+      color: #ffffff;
+    }
+    .box-toggle{
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .flex1 {
+        display: none;
+        flex-direction: column;
+      }
+      .home {
+        margin-left: 16px;
+      }
+      .Navbar__ToggleShow {
+        display: flex;
+      }
+      .box-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: relative;
+        cursor: pointer;
+        padding-right: 8px;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <h1 class="text-white text-2xl font-semibold">Course Helper</h1>
+      <nav class="items box">
+        <div class=" box-toggle">
+         <a href="./navigator.html"> <i class="fas fa-bars" ></i></a>
+        </div>
+        <div>
+          <ul class="flex space-x-4 flex1">
+            <li class="box home"><a href="./index.html" class="text-white hover:text-gray-200 link">Home</a></li>
+            <li class="box"><a href="./search.html" class="text-white hover:text-gray-200 link">Search</a></li>
+            <li class="box"><a href="./contact.html" class="text-white hover:text-gray-200 link">Contact</a></li>
+            <li class="box"><a href="./moderator.html" class="text-white hover:text-gray-200 link">Share Resources</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4">
+    <h2 class="text-3xl font-semibold mb-4">Welcome to Course Helper!</h2>
+    <p class="text-gray-700 mb-8">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod urna
+      quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Course Card 1 -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">Course 1</h3>
+        <p class="text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+          urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+        </p>
+        <a href="./course.html" class="text-blue-500 hover:underline">Learn More</a>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">Course 2</h3>
+        <p class="text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+          urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+        </p>
+        <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">Course 3</h3>
+        <p class="text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+          urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+        </p>
+        <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-600">© 2023 Course Helper. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function classToggle() {
+      const navs = document.querySelectorAll(".box");
+      navs.forEach((li) => li.classList.toggle("Navbar__ToggleShow"));
+    }
+    document.querySelector(".box-toggle").addEventListener("click", classToggle);
+  </script>
+</body>
+</html>

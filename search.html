@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Helper - Search</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional custom styles can be added here */
+    .header-expanded {
+      width: 100%;
+    }
+    #searchContainer {
+      width: 100%;
+    }
+    .w-0 {
+      width: auto;
+    }
+    .ml-4 {
+      margin-left: auto;
+    }
+    .menu-button-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+    }
+    @media (min-width: 640px) {
+      .menu-button-container {
+        justify-content: flex-end;
+        display: none;
+        margin-left: auto;
+      }
+      .menu-item {
+        order: 2;
+      }
+      .menu-item-home {
+        order: 1;
+      }
+      .menu-item-contact {
+        order: 3;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header id="header" class="bg-blue-500 py-4">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+      <h1 class="text-white text-2xl font-semibold mb-2 sm:mb-0">Course Helper</h1>
+      <div class="menu-button-container">
+        <button id="menuButton" class="text-white hover:text-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <path d="M4 6h16M4 12h16M4 18h16" ></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div id="searchContainer" class="flex flex-col sm:flex-row items-center mt-4 sm:mt-0">
+        <input id="searchInput" class="border border-gray-400 rounded-md py-2 px-3 w-full sm:w-auto transition-all duration-300 mb-2 sm:mb-0"
+          type="text" placeholder="Search...">
+        <button id="searchButton"
+          class="bg-white border border-gray-400 text-gray-600 rounded-md py-2 px-4 transition-colors duration-300">
+          Search
+        </button>
+      </div>
+      <div class="flex items-center">
+        <nav class="hidden sm:block ml-4">
+          <ul class="flex space-x-4">
+            <li class="menu-item-home"><a href="./index.html" class="text-white hover:text-gray-200">Home</a></li>
+            <!-- <li class="menu-item"><a href="" class="text-white hover:text-gray-200">Search</a></li> -->
+            <li class="menu-item-contact"><a href="./contact.html" class="text-white hover:text-gray-200">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4">
+    <!-- Content goes here -->
+    <!-- <main class="container mx-auto py-8 px-4"> -->
+      <h2 class="text-3xl font-semibold mb-4">Welcome to Course Helper!</h2>
+      <p class="text-gray-700 mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod urna
+        quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+      </p>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Course Card 1 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-4">Course 1</h3>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+            urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+          </p>
+          <a href="./course.html" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+  
+        <!-- Course Card 2 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-4">Course 2</h3>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+            urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+  
+        <!-- Course Card 3 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-4">Course 3</h3>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod
+            urna quis ex blandit porttitor. Mauris laoreet tempor aliquam.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-600">© 2023 Course Helper. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const searchContainer = document.getElementById('searchContainer');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const menuButton = document.getElementById('menuButton');
+    const header = document.getElementById('header');
+
+    searchButton.addEventListener('click', () => {
+      searchContainer.classList.toggle('expanded');
+      searchInput.focus();
+    });
+
+    searchInput.addEventListener('blur', () => {
+      if (searchInput.value === '') {
+        searchContainer.classList.remove('expanded');
+      }
+    });
+
+    searchInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        searchInput.value = '';
+        searchContainer.classList.remove('expanded');
+      }
+    });
+
+    menuButton.addEventListener('click', () => {
+      window.location.href = './navigator2.html';
+    });
+
+    // Optional: Expand the search on page load
+    window.addEventListener('load', () => {
+      searchContainer.classList.add('expanded');
+      searchInput.focus();
+    });
+  </script>
+</body>
+
+</html>

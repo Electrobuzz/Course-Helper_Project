@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Additional custom styles can be added here */
+      img{
+        height: 50px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+      }
+      .name{
+        font-weight: 500;
+      }
+      .flex p a{
+        margin-left: 10px;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-blue-500 text-white py-4 px-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">ESC101/111/112</h1>
+        <p><a href="./index.html" class="text-white hover:text-gray-200">Home</a></p>
+      </div>
+    </header>
+    <div class="container mx-auto py-6">
+      <div class="flex">
+        <div class="w-1/2 pr-4">
+          <!-- Course Resources -->
+          <div class="bg-white rounded shadow p-4 mb-6">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-bold">Resources</h2>
+              <div class="tag bg-blue-500 text-white rounded-full px-2 py-1">5</div>
+            </div>
+            <ul>
+              <li><a href="https://drive.google.com/drive/folders/1P_IUMRmQ_L_AbYhDJd9YrXwCoV9fl71M">Lecture Notes</a></li>
+              <li><a href="https://drive.google.com/drive/folders/18eDwDZGbyHezKCquxQ6wjCQwFLnkxUA0">Lab Problems</a></li>
+              <li><a href="https://drive.google.com/drive/folders/16shyeQK8sU0H7DNI1iEVjgXL2ipHtALp">Past Quizzes</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1Koo8hErCURhJWtkdfkLFTZj4HqHPyp_4">Midsem Papers</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1wViR0zyJ4sy_wLlF35BXt7VuHC8dgsG9">Endsem Papers</a></li>
+            </ul>
+          </div>
+          <!-- Grading -->
+          <div class="bg-white rounded shadow p-4 mb-6">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-bold">Grading</h2>
+              <div class="tag bg-blue-500 text-white rounded-full px-2 py-1">2</div>
+            </div>
+            <ul>
+              <li><a href="https://incog-nahito.github.io/grades/?year=2019-20&sem=1&cno=ESC101A">Y19 Sem1</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-1/2 pl-4">
+          <div class="bg-white rounded shadow p-4 mb-6">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-bold">Comments</h2>
+              <div class="tag bg-blue-500 text-white rounded-full px-2 py-1">12</div>
+            </div>
+            <div class="flex items-center mb-4">
+              <input id="latest" name="latest" type="radio" checked class="mr-2">
+              <label for="latest">Latest</label>
+              <div class="divider mx-2 h-4 border-r border-gray-400"></div>
+              <input id="popular" name="latest" type="radio" class="mr-2">
+              <label for="popular">Popular</label>
+            </div>
+            <div class="writing mb-4">
+              <div contenteditable="true" class="bg-gray-100 rounded p-2" autofocus spellcheck="false">
+                <p>Hi <a class="tagged-user">@Coordinators</a></p>
+              </div>
+              <div class="flex justify-between items-center mt-2">
+                <div class="text-format">
+                  <button class="btn"><i class="ri-bold"></i></button>
+                  <button class="btn"><i class="ri-italic"></i></button>
+                  <button class="btn"><i class="ri-underline"></i></button>
+                  <button class="btn"><i class="ri-list-unordered"></i></button>
+                </div>
+                <div class="group-button">
+                  <button class="btn"><i class="ri-at-line"></i></button>
+                  <button class="btn primary">Send</button>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="user-banner">
+                <div class="user">
+                  <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User Avatar">
+                    <span class="stat grey"></span>
+                  </div>
+                  <div class="name">Devansh Jain</div>
+                </div>
+                <div class="timestamp">2 hours ago</div>
+              </div>
+              <div class="content">
+                <p>More you practice, More you SCORE!!!</p>
+              </div>
+              <div class="actions">
+                <span class="reply-button">Reply</span>
+                <span class="like-button">12 Likes</span>
+              </div>
+              <!-- Replies -->
+              <div class="replies ml-8 mt-4">
+                <div class="reply mb-4">
+                  <div class="user-banner">
+                    <div class="user">
+                      <div class="avatar">
+                        <img  src="https://randomuser.me/api/portraits/women/12.jpg" alt="User Avatar">
+                        <span class="stat green"></span>
+                      </div>
+                      <div class="name">Angel Priya</div>
+                    </div>
+                    <div class="timestamp">1 hour ago</div>
+                  </div>
+                  <div class="content">
+                    <p>Where to practice?</p>
+                  </div>
+                  <div class="actions">
+                    <span class="reply-button">Reply</span>
+                    <span class="like-button">8 Likes</span>
+                  </div>
+                </div>
+                <div class="reply mb-4">
+                  <div class="user-banner">
+                    <div class="user">
+                      <div class="avatar">
+                        <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="User Avatar">
+                        <span class="stat"></span>
+                      </div>
+                      <div class="name">Raman Verma</div>
+                    </div>
+                    <div class="timestamp">30 minutes ago</div>
+                  </div>
+                  <div class="content">
+                    <p>CodeForces is good Platform to practice. But don't forget to practice on Pruter.</p>
+                  </div>
+                  <div class="actions">
+                    <span class="reply-button">Reply</span>
+                    <span class="like-button">5 Likes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Helper - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional custom styles can be added here */
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <h1 class="text-white text-2xl font-semibold">Course Helper</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="./index.html" class="text-white hover:text-gray-200">Home</a></li>
+          <!-- <li><a href="./search.html" class="text-white hover:text-gray-200">Search</a></li> -->
+          <!-- <li><a href="#" class="text-white hover:text-gray-200">Contact</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4">
+    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+    <form class="bg-white shadow-md rounded-lg p-6">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+        <input class="border border-gray-400 rounded-md py-2 px-3 w-full" type="text" id="name" name="name" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="roll">Roll No.</label>
+        <input class="border border-gray-400 rounded-md py-2 px-3 w-full" type="text" id="roll" name="roll" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="feedback">Feedback</label>
+        <textarea class="border border-gray-400 rounded-md py-2 px-3 w-full" id="feedback" name="feedback" rows="4" required></textarea>
+      </div>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-600">© 2023 Course Helper. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
