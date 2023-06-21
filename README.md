@@ -22,8 +22,8 @@ The goal was to create a responsive and interactive website using HTML, CSS Tail
 - Day 4:
   - Added 3 Course pages (MTH, ESC and CHM). 
   - Linked
-     the resources in each page with drive folders
-     Grading with github old grades repo
+    - the resources in each page with drive folders
+    - Grading with github old grades repo
      and worked on Review and Comment section.
   - Worked on Responsiveness of the Website to make it user-friendly.
   - Added Search Bar and Collapsible Menu features in header. 
